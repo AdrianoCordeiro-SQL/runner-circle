@@ -8,6 +8,7 @@ import { useQuery } from "@apollo/client";
 import ErrorMessage from "../components/ui/ErrorMessage";
 import { GET_FEED, GET_FEED_BY_CATEGORY } from "../../database/graphql/query/feed";
 import Dropdown from "../components/ui/Dropdown";
+import { FutureTrainingsList } from "../components/FutureTrainingList";
 
 
 
@@ -74,6 +75,8 @@ function Feed({ onNavigateToNewPost, onNavigateToProfile, onLogout }) {
             <h1 className="text-2xl font-bold text-brand-graphite mb-6 hidden md:block">
               Feed de Treinos
             </h1>
+
+            <FutureTrainingsList />
 
             <Dropdown 
               options={categoryOptions}

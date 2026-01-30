@@ -116,3 +116,19 @@ export const feed = [
 		timestamp: '2025-01-13T17:20:00Z',
 	},
 ];
+export const futureTrainings = [
+  {
+    id: 1,
+    title: 'Corrida longa',
+    date: '2026-02-10',
+    category: 'corrida',
+    plannedDistance: '12 Km',
+  },
+  {
+    id: 2,
+    title: 'Caminhada regenerativa',
+    date: '2026-02-12',
+    category: 'caminhada',
+    plannedDistance: '5 Km',
+  },
+];
