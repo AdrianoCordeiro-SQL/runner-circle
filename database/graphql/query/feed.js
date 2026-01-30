@@ -8,7 +8,6 @@ export const GET_FEED = gql`
       time
       stats
       description
-      workout
     }
   }
 `;
@@ -21,7 +20,6 @@ export const GET_FEED_BY_CATEGORY = gql`
       time
       stats
       description
-      workout
     }
   }
 `
