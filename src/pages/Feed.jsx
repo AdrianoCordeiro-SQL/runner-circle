@@ -14,7 +14,13 @@ import Dropdown from "../components/ui/Dropdown";
 function Feed({ onNavigateToNewPost, onNavigateToProfile, onLogout }) {
   const [activeItem, setActiveItem] = useState("feed");
   const [workouts, setWorkouts] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
   const { loading, error, data } = useQuery(GET_FEED);
+  const { loading: loadingCategory, error: errorCategory, data: dataCategory } = useQuery(GET_FEED_BY_CATEGORY, {
+    variables: { category: selectedCategory },
+    skip: !selectedCategory,
+  });
+
 
   useEffect(() => {
     const fetchWorkouts = async () => {
