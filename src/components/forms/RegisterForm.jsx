@@ -39,7 +39,7 @@ function RegisterForm({ onNavigateToLogin }) {
 		setLoading(true);
 
 		try {
-			const response = await fetch('http://localhost:3001/user', {
+			const response = await fetch('http://localhost:3002/user', {
 				method: 'PUT',
 				headers: {
 					'Content-Type': 'application/json',

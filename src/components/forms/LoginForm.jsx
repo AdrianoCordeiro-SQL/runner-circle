@@ -17,7 +17,7 @@ function LoginForm({ onNavigateToRegister, onNavigateToFeed }) {
 		setLoading(true);
 
 		try {
-			const response = await fetch('http://localhost:3001/user');
+			const response = await fetch('http://localhost:3002/user');
 			if (!response.ok) {
 				throw new Error('Erro ao conectar com o servidor');
 			}

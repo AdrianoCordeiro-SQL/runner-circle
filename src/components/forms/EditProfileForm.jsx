@@ -21,7 +21,7 @@ function EditProfileForm({ onSubmit, onCancel }) {
     const fetchUserData = async () => {
       try {
         setLoading(true)
-        const response = await fetch('http://localhost:3001/user')
+        const response = await fetch('http://localhost:3002/user')
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }
@@ -61,7 +61,7 @@ function EditProfileForm({ onSubmit, onCancel }) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await fetch('http://localhost:3001/user', {
+      const response = await fetch('http://localhost:3002/user', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
