@@ -2,8 +2,11 @@ import Header from '../components/layout/Header'
 import Sidebar from '../components/layout/Sidebar'
 import BottomNavigation from '../components/layout/BottomNavigation'
 import NewPostForm from '../components/forms/NewPostForm'
+import { useMutation } from '@apollo/client';
+import { ADD_FEED_POST } from '../../database/graphql/mutation/feed';
 
 function NewPost({ onNavigateToFeed }) {
+  const [addFeedPost, { loading: savingPost }] = useMutation(ADD_FEED_POST);
   const handleSubmit = (formData) => {
     console.log('Nova postagem:', formData)
     // Aqui seria onde salvaria os dados no backend

@@ -131,4 +131,11 @@ export const futureTrainings = [
     category: 'caminhada',
     plannedDistance: '5 Km',
   },
+  {
+    id: 2,
+    title: 'Corrida intensa',
+    date: '2026-02-14',
+    category: 'corrida',
+    plannedDistance: '15 Km',
+  },
 ];
