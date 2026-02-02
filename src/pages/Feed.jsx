@@ -55,6 +55,10 @@ function Feed({ onNavigateToNewPost, onNavigateToProfile, onLogout }) {
     }
   };
 
+  const handleDelete = (id) => {
+
+  }
+
   const categoryOptions = [
     { value: '', label: 'Todos' },
     { value: 'corrida', label: 'Corrida' },
@@ -102,7 +106,7 @@ function Feed({ onNavigateToNewPost, onNavigateToProfile, onLogout }) {
             {!loading && !error && (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
                 {workouts.map((workout) => (
-                  <WorkoutCard key={workout.id} workout={workout} />
+                  <WorkoutCard key={workout.id} workout={workout} onDelete={handleDelete}/>
                 ))}
               </div>
             )}
