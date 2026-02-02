@@ -2,12 +2,12 @@ import { gql } from "@apollo/client";
 
 export const ADD_FEED_POST = gql`
   mutation AddFeedPost(
-    $user: JSON
-    $time: Int
-    $stats: JSON
+    $user: JSON!
+    $time: Int!
+    $stats: JSON!
     $category: String!
-    $description: String
-    $timestamp: String
+    $description: String!
+    $timestamp: String!
   ) {
     createFeed(
       user: $user
